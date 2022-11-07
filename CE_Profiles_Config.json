@@ -1,0 +1,58 @@
+{
+"Classification_Region_Aggregate":	{Name: "RECC_v2.4_regions", ID: 77},
+"Classification_Region_Country":	{Name: "regions_iso_iedc", ID: 2},
+"Classification_Sector":		{Name: "general_product_categories", ID: 7},
+"Classification_Scenario":		{Name: "basic_scenario_alternatives", ID: 8},
+
+"Colors_6GrayShades":			{{Name: "6Gray1",  R: 247, G: 247, B: 247},
+					 {Name: "6Gray2",  R: 217, G: 217, B: 217},
+					 {Name: "6Gray3",  R: 189, G: 189, B: 189},
+					 {Name: "6Gray4",  R: 150, G: 150, B: 150},
+					 {Name: "6Gray5",  R:  99, G:  99, B:  99},
+					 {Name: "6Gray6",  R:  37, G:  37, B:  37}},
+
+"Colors_6GreenShades":			{{Name: "6Green1",  R: 237, G: 248, B: 251},
+					 {Name: "6Green2",  R: 204, G: 236, B: 230},
+					 {Name: "6Green3",  R: 153, G: 216, B: 201},
+					 {Name: "6Green4",  R: 102, G: 194, B: 164},
+					 {Name: "6Green5",  R:  44, G: 162, B:  95},
+					 {Name: "6Green6",  R:   0, G: 109, B:  44}},
+
+"Colors_6PurpleShades":			{{Name: "6Purple1", R: 242, G: 240, B: 247},
+					 {Name: "6Purple2", R: 218, G: 218, B: 235},
+					 {Name: "6Purple3", R: 188, G: 189, B: 220},
+					 {Name: "6Purple4", R: 158, G: 154, B: 200},
+					 {Name: "6Purple5", R: 117, G: 107, B: 177},
+					 {Name: "6Purple6", R:  84, G:  39, B: 143}},
+
+"Visual1_pav":
+	{Name: "LinePlotServiceFlow", Caption: "Total passenger-km delivered, by CE strategy.", 
+	 ScenarioList: ["No new strategies (Baseline)","car-sharing","ride-sharing","Full strategy spectrum"]
+	 ColorList:    ["6Gray3","6Purple4","6Purple5","6Gray5"],
+	 iedc_dataset_name:	"1_F_XXX (Tbd.)",
+	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
+	},
+
+"Visual1_reb":
+	{Name: "LinePlotStock", Caption: "Total residential building floorspace, by CE strategy.", 
+	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
+	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
+	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
+	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
+	},
+
+"Visual1_nrb":
+	{Name: "LinePlotStock", Caption: "Total non-residential building floorspace, by CE strategy.", 
+	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
+	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
+	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
+	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
+	},
+
+}
+
+
+
