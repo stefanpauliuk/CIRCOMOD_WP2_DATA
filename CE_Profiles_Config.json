@@ -30,7 +30,7 @@
 	 ScenarioList: ["No new strategies (Baseline)","car-sharing","ride-sharing","Full strategy spectrum"]
 	 ColorList:    ["6Gray3","6Purple4","6Purple5","6Gray5"],
 	 iedc_dataset_name:	"1_F_XXX (Tbd.)",
-	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_dataset_version:	"v2.4",
 	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
 	},
 
@@ -39,7 +39,7 @@
 	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
 	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
 	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
-	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_dataset_version:	"v2.4",
 	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
 	},
 
@@ -48,8 +48,44 @@
 	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
 	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
 	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
-	 iedc_dataset_version:	"vXXX (Tbd.)",
+	 iedc_dataset_version:	"v2.4",
 	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
+	},
+
+"Visual_GHG_Timeseries_pav":
+	{Name: "LinePlotGHG", Caption: "System-wide GHG emissions, Mt CO2-eq/yr, by CE strategy.", 
+	 ScenarioList: ["Baseline","HIY-RLU","HIY-RLU-MSU","HIY-RLU-MSU-ULD","HIY-RLU-MSU-DOS","HIY-RLU-MSU-DOS-CAS","Full CE"]
+	 ColorList:    ["6Gray3","6Green5","6Purple2","6Green6","6Purple1","6Purple4","6Gray5"],
+	 iedc_dataset_name:	"1_F_GHG_BySector_RECCv2.4",
+	 iedc_dataset_version:	"v2.4",
+	 iedc_querystring:	"SELECT (value,aspect7,aspect8) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND aspect1 = Thisregion AND aspect2 = "GWP100" AND aspect3 = "passenger vehicles" AND aspect 4 = "system-wide" AND aspect5 = "natural environment" AND aspect 6 = ThisScenario"
+	},
+
+"Visual_GHG_Timeseries_reb":
+	{Name: "LinePlotGHG", Caption: "System-wide GHG emissions, Mt CO2-eq/yr, by CE strategy.", 
+	 ScenarioList: ["Baseline","HIY-RLU","HIY-RLU-MSU","HIY-RLU-MSU-ULD","HIY-RLU-MSU-DOS","Full CE"]
+	 ColorList:    ["6Gray3","6Green5","6Purple2","6Green6","6Purple1","6Gray5"],
+	 iedc_dataset_name:	"1_F_GHG_BySector_RECCv2.4",
+	 iedc_dataset_version:	"v2.4",
+	 iedc_querystring:	"SELECT (value,aspect7,aspect8) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND aspect1 = Thisregion AND aspect2 = "GWP100" AND aspect3 = "residential building" AND aspect 4 = "system-wide" AND aspect5 = "natural environment" AND aspect 6 = ThisScenario"
+	},
+
+"Visual_Materials_Timeseries_pav":
+	{Name: "LinePlotGHG", Caption: "Material production, Mt/yr, by CE strategy.", 
+	 ScenarioList: ["Baseline","HIY-RLU","HIY-RLU-MSU","HIY-RLU-MSU-ULD","HIY-RLU-MSU-DOS","HIY-RLU-MSU-DOS-CAS","Full CE"]
+	 ColorList:    ["6Gray3","6Green5","6Purple2","6Green6","6Purple1","6Purple4","6Gray5"],
+	 iedc_dataset_name:	"1_F_MaterialProduction_RECCv2.4",
+	 iedc_dataset_version:	"v2.4",
+	 iedc_querystring:	"SELECT (value,aspect 2, aspect7,aspect8) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND aspect1 = Thisregion AND aspect3 = "passenger vehicles" AND aspect 4 = "system-wide" AND aspect5 = "natural environment" AND aspect 6 = ThisScenario"
+	},
+
+"Visual_Materials_Timeseries_reb":
+	{Name: "LinePlotGHG", Caption: "Material production, Mt/yr, by CE strategy.", 
+	 ScenarioList: ["Baseline","HIY-RLU","HIY-RLU-MSU","HIY-RLU-MSU-ULD","HIY-RLU-MSU-DOS","Full CE"]
+	 ColorList:    ["6Gray3","6Green5","6Purple2","6Green6","6Purple1","6Gray5"],
+	 iedc_dataset_name:	"1_F_MaterialProduction_RECCv2.4",
+	 iedc_dataset_version:	"v2.4",
+	 iedc_querystring:	"SELECT (value,aspect 2, aspect7,aspect8) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND aspect1 = Thisregion AND aspect3 = "residential building" AND aspect 4 = "system-wide" AND aspect5 = "natural environment" AND aspect 6 = ThisScenario"
 	},
 
 }
