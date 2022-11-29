@@ -29,16 +29,16 @@
 	{Name: "LinePlotServiceFlow", Caption: "Total passenger-km delivered, by CE strategy.", 
 	 ScenarioList: ["No new strategies (Baseline)","car-sharing","ride-sharing","Full strategy spectrum"]
 	 ColorList:    ["6Gray3","6Purple4","6Purple5","6Gray5"],
-	 iedc_dataset_name:	"1_F_XXX (Tbd.)",
+	 iedc_dataset_name:	"1_F_Function_passenger_vehicles_RECCv2.4",
 	 iedc_dataset_version:	"v2.4",
-	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
+	 iedc_querystring:	"SELECT (time, value, unit_nominator, unit_denominator) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect3 = SelectedRegion AND Aspect5 = ScenarioList"
 	},
 
 "Visual1_reb":
 	{Name: "LinePlotStock", Caption: "Total residential building floorspace, by CE strategy.", 
 	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
 	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
-	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
+	 iedc_dataset_name:	"2_IUS_ResidentlBldngs_RECCv2.4",
 	 iedc_dataset_version:	"v2.4",
 	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
 	},
@@ -47,7 +47,7 @@
 	{Name: "LinePlotStock", Caption: "Total non-residential building floorspace, by CE strategy.", 
 	 ScenarioList: ["No new strategies (Baseline)","more intense building use"]
 	 ColorList:    ["6Gray3","6Purple6","6Gray5"],
-	 iedc_dataset_name:	"2_S_XXX (Tbd.)",
+	 iedc_dataset_name:	"Not available in RECC v2.4!",
 	 iedc_dataset_version:	"v2.4",
 	 iedc_querystring:	"SELECT (value, unit) FROM iedc WHERE id = iedc_dataset_name AND version = iedc_dataset_version AND Aspect1 = Thisregion AND Aspect2 = Thissector AND Aspect3 = ThisScenario"
 	},
